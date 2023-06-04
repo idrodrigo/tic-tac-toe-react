@@ -6,6 +6,7 @@ import { TURNS } from "./constants";
 import { checkWinner } from "./logic/board";
 import { WinnerModal } from "./components/WinnerModal";
 import { resetGameStorage, saveGameToStorage } from "./logic/storage/index.js";
+import FollowMouse from "./components/FollowMouse";
 
 function App() {
   const [board, setBoard] = useState(() => {
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <>
+    <FollowMouse/>
       <main className="board">
         <h1>tic tac toe</h1>
         <button onClick={resetGame}>Restart</button>
